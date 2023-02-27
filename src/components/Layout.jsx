@@ -26,7 +26,7 @@ function Layout() {
 
   return (
     <div className='bg-black h-screen'>
-        <div className="bg-white h-full w-[500px] m-auto grid grid-rows-[160px,1fr] grid-cols-4">
+        <div className="bg-white h-full w-full sm:w-[500px] m-auto grid grid-rows-[160px,1fr] grid-cols-4">
             <Displayer value={result || latestValue || operation.at(-1)} />
             <NumControl setValue={setLatestValue} setOperation={setOperation} onReset={onReset} setResult={setResult} value={latestValue} operation={operation} />
             <Operators setOperation={setOperation} getResult={getResult} setLatestValue={setLatestValue} latestValue={latestValue} operation={operation} />
