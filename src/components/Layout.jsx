@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Displayer from './Displayer'
 import NumControl from './NumControl'
 import Operators from './Operators'
@@ -13,10 +13,6 @@ function Layout() {
         setResult(null);
         setLatestValue(null)
     };
-
-    useEffect(() =>{
-        console.log(operation);
-    }, [operation])
 
     const getResult = () =>{
         const res = eval([...operation, latestValue].join(' '))
